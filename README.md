@@ -1,6 +1,6 @@
-## Applications-of-Linear-Programming-in-Digital-Systems
+## Applications-of-Linear-Programming-in-Digital-Systems👩🏻‍💻💻
 
-### *Welcome* to my first repository with my files! 📈🧠📚
+### *Welcome* to my first repository with my files! 🧠📚
 
 There are two presentations in two different languages:
 1) In English 🚇💂🏼‍♀️☎️
