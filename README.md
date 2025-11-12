@@ -1,4 +1,4 @@
-# Applications-of-Linear-Programming-in-Digital-Systems
+##### Applications-of-Linear-Programming-in-Digital-Systems
 
 Welcome to my repository with my files! 📈🧠📚
 
