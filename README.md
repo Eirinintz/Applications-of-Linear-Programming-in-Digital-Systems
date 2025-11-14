@@ -16,6 +16,6 @@ Click on the file name to download, whichever you want.🤔😉
 
 ---
 
-Tools used: 🧠📚
+Tool used: 🧠📚
 
 ChatGPT AI tool for assistance.
