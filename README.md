@@ -18,7 +18,7 @@ Click on the file name to download, whichever you want.🤔😉
 
 There are also two more files in notepad format. 
 
-The *first* concerns the Hungarian algorithm and the *second* concerns the Modi algorithm.
+The *first* concerns the Hungarian algorithm and the *second* concerns the Modi algorithm, with comments on both.
 
 ---
 
