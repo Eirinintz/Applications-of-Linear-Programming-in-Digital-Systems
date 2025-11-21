@@ -9,8 +9,8 @@ This work was done as part of the *Introduction to Linear and Non-Linear Optimiz
 ---
 
 There are two presentations in two different languages:
-1) In English 🚇💂🏼‍♀️☎️
-2) In Greek 🏛🏺🧿
+1) In *English* 🚇💂🏼‍♀️☎️
+2) In *Greek* 🏛🏺🧿
 
 Click on the file name to download, whichever you want.🤔😉
 
@@ -20,7 +20,7 @@ There are also two more files in notepad format.
 
 The *first* concerns the Hungarian algorithm and the *second* concerns the Modi algorithm.
 
---
+---
 
 Tool used: 🧠📚
 
