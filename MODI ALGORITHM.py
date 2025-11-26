@@ -1,0 +1,92 @@
+import numpy as np
+import pandas as pd
+
+# Transportation cost data (cost table)
+# Each line corresponds to a source (Α, Β, Γ)
+# Each column corresponds to a destination (Π1, Π2, Π3)
+costs = np.array([
+    [4, 8, 5],   # Α -> Π1, Π2, Π3
+    [6, 4, 3],   # Β -> Π1, Π2, Π3
+    [7, 6, 4]    # Γ -> Π1, Π2, Π3
+])
+
+# Supply and Demand
+# The quantities to be transported from each source
+supply = [20, 30, 25]
+# The quantities needed by each destination
+demand = [30, 25, 20]
+
+# STEP ONE: Create a cost table with labels
+df_costs = pd.DataFrame(costs,
+                        index=["Α (20)", "Β (30)", "Γ (25)"],
+                        columns=["Π1 (30)", "Π2 (25)", "Π3 (20)"])
+
+print("STEP ONE: Transfer Table (Cost)\n")
+print(df_costs)
+
+# STEP TWO: Initial basic feasible solution
+# Here we do NOT use the automatic Northwest Corner,
+# but we manually put the distribution you have in Powerpoint
+alloc = np.array([
+    [20, 0, 0],   # Α -> Π1
+    [10, 20, 0],  # Β -> Π1, Π2
+    [0, 5, 20]    # Γ -> Π2, Π3
+])
+
+df_alloc = pd.DataFrame(alloc,
+                        index=["Α (20)", "Β (30)", "Γ (25)"],
+                        columns=["Π1 (30)", "Π2 (25)", "Π3 (20)"])
+
+print("\nSTEP TWO: Initial basic feasible solution (Northwest Corner)\n")
+print(df_alloc)
+
+# STEP THREE: Calculation of variables R and K
+# R and K are the binary variables used in the MODI method
+print("\nSTEP THREE: Calculation of variables R and K\n")
+
+R = [0, None, None]   # We start with R1 = 0
+K = [None, None, None]
+
+# Calculations based on key cells
+K[0] = costs[0][0] - R[0]        # K1 = 4
+R[1] = costs[1][0] - K[0]        # R2 = 2
+K[1] = costs[1][1] - R[1]        # K2 = 2
+R[2] = costs[2][1] - K[1]        # R3 = 4
+K[2] = costs[2][2] - R[2]        # K3 = 0
+
+print(f"R1 = {R[0]}, R2 = {R[1]}, R3 = {R[2]}")
+print(f"K1 = {K[0]}, K2 = {K[1]}, K3 = {K[2]}")
+
+# FOURTH STEP: Calculation of Improvement Indices Δij
+# If all Δ >= 0, the solution is optimal
+print("\nFOURTH STEP: Calculation of Improvement Indices Δij\n")
+
+optimal = True
+for i in range(3):
+    for j in range(3):
+        if alloc[i][j] == 0:  # we only examine unused cells
+            delta = costs[i][j] - (R[i] + K[j])
+            print(f"Δ({i+1},{j+1}) = {costs[i][j]} - ({R[i]}+{K[j]}) = {delta}")
+            if delta < 0:
+                optimal = False
+
+print("\nOptimization Check:")
+if optimal:
+    print("All Δ > 0 ⇒ The solution is optimal ✅")
+else:
+    print("There is room for improvement ❌")
+
+# STEP FIVE: Calculating Total Cost
+print("\nSTEP FIVE: Calculating Total Cost\n")
+
+total_cost = np.sum(alloc * costs)
+
+# Detailed printing to clearly see the total
+print("Detailed Cost Calculation:")
+print(f"Α→Π1: 20 × 4 = {20*4}")
+print(f"Β→Π1: 10 × 6 = {10*6}")
+print(f"Β→Π2: 20 × 4 = {20*4}")
+print(f"Γ→Π2: 5 × 6 = {5*6}")
+print(f"Γ→Π3: 20 × 4 = {20*4}")
+
+print("\nTotal Cost =", total_cost)
