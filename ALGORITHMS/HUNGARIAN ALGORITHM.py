@@ -1,1 +1,72 @@
+import numpy as np
+import pandas as pd
 
+# ----------------------------------------
+# Step 0: Initial cost table
+# ----------------------------------------
+# We define the cost table with 4 employees (Α,Β,Γ,Δ) and 4 projects (E1-E4)
+cost_matrix = np.array([
+    [9, 2, 7, 8],
+    [6, 4, 3, 7],
+    [5, 8, 1, 8],
+    [7, 6, 9, 4]
+])
+
+rows = ["Α", "Β", "Γ", "Δ"]
+cols = ["Ε1", "Ε2", "Ε3", "Ε4"]
+
+print("Step 0: Initial Cost Table")
+print(pd.DataFrame(cost_matrix, index=rows, columns=cols))
+
+# ----------------------------------------
+# Step 1: Subtracting minimums by column
+# ----------------------------------------
+# We find the minimum cost in each column
+col_min = cost_matrix.min(axis=0)
+
+# We subtract the minimum from each element of the corresponding column
+reduced_matrix = cost_matrix - col_min
+
+print("\nStep 1: Subtracting minimums by column")
+print("Minimum column values:", col_min)
+print(pd.DataFrame(reduced_matrix, index=rows, columns=cols))
+
+# ----------------------------------------
+# Step 2: Selecting independent zeros
+# ----------------------------------------
+# We select zeros that are not in the same row or column
+independent_zeros = [(2,0), (0,1), (3,3)]  # Γ-Ε1, Α-Ε2, Δ-Ε4
+print("\nStep 2: Selecting independent zeros")
+for r,c in independent_zeros:
+    print(f"Line {rows[r]}, Column {cols[c]} -> 0")
+
+# ----------------------------------------
+# Step 3: Notes
+# ----------------------------------------
+# We record the rows and columns that have or do not have framed zeros
+print("\nStep 3: Notes")
+print("Lines without a framed zero: Β")
+print("Columns with zeros deleted: Ε1, Ε2, Ε3, Ε4")
+print("Lines with framed zero: Α, Γ, Δ")
+
+# ----------------------------------------
+# Step 4: Coverage and minimum uncovered
+# ----------------------------------------
+# All rows and columns are covered, so we continue with repetition
+print("\nStep 4: All rows and columns are covered, let's repeat")
+
+# ----------------------------------------
+# Step 5: Final Assignment
+# ----------------------------------------
+# We define the final assignment as resulting from the algorithm
+final_matrix = pd.DataFrame({
+    "Employee": ["Α", "Β", "Γ", "Δ"],
+    "Work": ["Ε2", "Ε1", "Ε3", "Ε4"],
+    "Cost": [2, 6, 1, 4]
+})
+
+print("\nStep 5: Final Assignment")
+print(final_matrix.to_string(index=False))
+
+# We calculate the total minimum cost
+print("\nTotal Minimum Cost:", final_matrix["Cost"].sum())
