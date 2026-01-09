@@ -7,11 +7,14 @@
 
 ---
 
-📝 There are two presentations in two different languages:
-1) In *English* 🚇💂🏼‍♀️☎️
-2) In *Greek* 🏛🏺🧿
+📝 There are two different presentation files:
 
-Click on the file name to download, whichever you want.🤔😉
+1️⃣ In English 🚇💂🏼‍♀️☎️
+2️⃣ In Greek 🏛🏺🧿
+
+Inside these files, each presentation is available both in PowerPoint format 📊 and as a CMD version 💻.
+
+👉 Click on the file name to download whichever version you want! 🤔😉
 
 ---
 
