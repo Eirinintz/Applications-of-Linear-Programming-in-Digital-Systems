@@ -1,4 +1,4 @@
-💡 If you don’t want to view the PowerPoint presentation, you can check the PDF version or the notes directly in this repository. 📄✨
+💡 If you don’t want to view the PowerPoint presentation, you can check the PDF version or the notes directly in this repository, in english of course. 📄✨
 
 
 <p align="center">
