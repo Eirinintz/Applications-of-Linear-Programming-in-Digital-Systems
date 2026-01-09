@@ -19,11 +19,11 @@ Inside these files, each presentation is available both in PowerPoint format �
 
 ---
 
-🗂️ There are also two more files in Notepad format:
+🗂️ There is also one more file containing two different codes:
 
-1️⃣ The first 📄💡 concerns the Hungarian algorithm, with explanatory comments. 🧩
+1️⃣ The first 📄💡 concerns the Hungarian algorithm, with explanatory comments 🧩
 
-2️⃣ The second 📄💡 concerns the Modi algorithm, also including detailed comments. 📝✨
+2️⃣ The second 📄💡 concerns the Modi algorithm, also including detailed comments 📝✨
 
 ---
 
