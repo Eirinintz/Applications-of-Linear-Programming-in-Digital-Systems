@@ -7,7 +7,7 @@
 
 ---
 
-📝 There are *two* different presentation files:
+### 📝 There are *two* different presentation files:
 
 1️⃣ In *English* 🚇💂🏼‍♀️☎️
 
@@ -19,7 +19,7 @@ Inside these files, each presentation is available both in *PowerPoint format* �
 
 ---
 
-🗂️ There is also *one* more file containing two different codes:
+### 🗂️ There is also *one* more file containing two different codes:
 
 1️⃣ The ***first*** 📄💡 concerns the **Hungarian Algorithm**, with explanatory comments 🧩
 
@@ -27,6 +27,6 @@ Inside these files, each presentation is available both in *PowerPoint format* �
 
 ---
 
-🛠️ Tool used: 🧠📚
+### 🛠️ Tool used: 🧠📚
 
 ChatGPT AI tool 🤖 — used for assistance, explanations, and code support 💻✨
