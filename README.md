@@ -7,7 +7,7 @@
 
 ---
 
-📝 There are two different presentation files:
+📝 There are *two* different presentation files:
 
 1️⃣ In English 🚇💂🏼‍♀️☎️
 
