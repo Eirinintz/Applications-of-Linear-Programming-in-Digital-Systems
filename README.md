@@ -3,7 +3,7 @@
 ### 🎉 *Welcome* to my first repository with my files! 💻📂✨
 ---
 
-📚 This work was done as part of the *Introduction to Linear and Non-Linear Optimization* course 🧮 of the **Department of Digital Systems** 💻 at the **University of Peloponnese** 🏛️.
+📚 This work was done as part of the *Introduction to Linear and Non-Linear Optimization* course 🧮 of the ***Department of Digital Systems*** 💻 at the **University of Peloponnese** 🏛️.
 
 ---
 
